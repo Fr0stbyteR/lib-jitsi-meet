@@ -12,6 +12,9 @@ import * as JitsiTrackErrors from './JitsiTrackErrors';
 import * as JitsiTrackEvents from './JitsiTrackEvents';
 import * as JitsiTranscriptionStatus from './JitsiTranscriptionStatus';
 import RTC from './modules/RTC/RTC';
+import JitsiTrack from './modules/RTC/JitsiTrack';
+import JitsiLocalTrack from './modules/RTC/JitsiLocalTrack';
+import JitsiRemoteTrack from './modules/RTC/JitsiRemoteTrack';
 import browser from './modules/browser';
 import NetworkInfo from './modules/connectivity/NetworkInfo';
 import { TrackStreamingStatus } from './modules/connectivity/TrackStreamingStatus';
@@ -533,6 +536,10 @@ export default {
     util: {
         AuthUtil,
         ScriptUtil,
-        browser
+        browser,
+        RTC,
+        JitsiTrack,
+        JitsiLocalTrack,
+        JitsiRemoteTrack
     }
 };

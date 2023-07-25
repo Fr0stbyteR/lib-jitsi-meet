@@ -14,7 +14,10 @@ import BrowserCapabilities from './modules/browser/BrowserCapabilities';
 import { DetectionEvents } from './modules/detection/DetectionEvents';
 import TrackVADEmitter, { VADProcessor } from './modules/detection/TrackVADEmitter';
 import RecordingConstants from './modules/recording/recordingConstants';
+import RTC from './modules/RTC/RTC';
+import JitsiTrack from './modules/RTC/JitsiTrack';
 import JitsiLocalTrack from './modules/RTC/JitsiLocalTrack';
+import JitsiRemoteTrack from './modules/RTC/JitsiRemoteTrack';
 import PrecallTest from './modules/statistics/PrecallTest';
 import AuthUtil from './modules/util/AuthUtil';
 import ScriptUtil from './modules/util/ScriptUtil';
@@ -105,9 +108,9 @@ export type JitsiMeetJSType = {
 
   isWebRtcSupported: () => boolean;
 
-  setLogLevel: ( level: Logger.levels ) => void;
+  setLogLevel: ( level: JitsiLogLevels ) => void;
 
-  setLogLevelById: ( level: Logger.levels, id: unknown ) => void; // TODO:
+  setLogLevelById: ( level: JitsiLogLevels, id: unknown ) => void; // TODO:
 
   addGlobalLogTransport: ( globalTransport: unknown ) => void; // TODO:
 
@@ -142,7 +145,11 @@ export type JitsiMeetJSType = {
   util: {
     AuthUtil: { getTokenAuthUrl: typeof AuthUtil.getTokenAuthUrl },
     ScriptUtil: { loadScript: typeof ScriptUtil.loadScript },
-    browser: BrowserCapabilities
+    browser: BrowserCapabilities,
+    RTC: typeof RTC,
+    JitsiTrack: typeof JitsiTrack,
+    JitsiLocalTrack: typeof JitsiLocalTrack,
+    JitsiRemoteTrack: typeof JitsiRemoteTrack
   }
 }
 
