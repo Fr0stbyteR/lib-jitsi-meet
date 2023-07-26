@@ -151,4 +151,5 @@ export default class JitsiConference {
   enableAVModeration: ( mediaType: MediaType ) => void;
   disableAVModeration: ( mediaType: MediaType ) => void;
   avModerationApprove: ( mediaType: MediaType, id: string ) => void;
+  _setupNewTrack: ( newTrack: JitsiLocalTrack ) => void;
 }
