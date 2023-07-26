@@ -16,4 +16,5 @@ export default class JitsiLocalTrack extends JitsiTrack {
   stopStream: () => void;
   isReceivingData: () => boolean;
   toString: () => string;
+  setConference: () => void;
 }

@@ -9,6 +9,7 @@ import Transcriber from './modules/transcription/transcriber';
 import JitsiVideoSIPGWSession from './modules/videosipgw/JitsiVideoSIPGWSession';
 import TraceablePeerConnection from './modules/RTC/TraceablePeerConnection';
 import { MediaType } from './service/RTC/MediaType';
+import RTC from './modules/RTC/RTC';
 
 export default class JitsiConference {
   constructor( options: {
@@ -25,6 +26,7 @@ export default class JitsiConference {
     },
     connection: unknown
   } ); // TODO:
+  get rtc(): RTC
   join(password: string, replaceParticipant?: boolean): void;
   authenticateAndUpgradeRole: ( options: unknown ) => Promise<unknown>; // TODO:
   isJoined: () => boolean;
