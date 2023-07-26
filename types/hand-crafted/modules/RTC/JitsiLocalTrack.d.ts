@@ -1,5 +1,6 @@
 import JitsiTrack from './JitsiTrack';
 import { CameraFacingMode } from '../../service/RTC/CameraFacingMode';
+import JitsiConference from './JitsiConference';
 
 export default class JitsiLocalTrack extends JitsiTrack {
   constructor( trackInfo: { rtcId: number, stream: unknown, track: unknown, mediaType: unknown, videoType: unknown, effects: unknown, resolution: unknown, deviceId: string, facingMode: CameraFacingMode, sourceId: unknown } ) // TODO:
@@ -16,5 +17,5 @@ export default class JitsiLocalTrack extends JitsiTrack {
   stopStream: () => void;
   isReceivingData: () => boolean;
   toString: () => string;
-  setConference: () => void;
+  setConference: (conference: JitsiConference) => void;
 }
