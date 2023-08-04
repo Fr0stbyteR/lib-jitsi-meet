@@ -1,6 +1,8 @@
 import Logger from '@jitsi/logger';
+import JitsiConference from './JitsiConference';
 import JitsiConnection from './JitsiConnection';
 import JitsiMediaDevices from './JitsiMediaDevices';
+import JitsiParticipant from './JitsiParticipant';
 import { JitsiConferenceErrors } from './JitsiConferenceErrors';
 import { JitsiConnectionErrors } from './JitsiConnectionErrors';
 import { JitsiTrackErrors } from './JitsiTrackErrors';
@@ -64,7 +66,9 @@ export type InitOptions = {
 export type JitsiMeetJSType = {
   version: string;
 
+  JitsiConference: typeof JitsiConference;
   JitsiConnection: typeof JitsiConnection;
+  JitsiParticipant: typeof JitsiParticipant;
 
   ProxyConnectionService: unknown; // TODO:
 

@@ -1,5 +1,6 @@
 import Logger from '@jitsi/logger';
 
+import JitsiConference from './JitsiConference';
 import * as JitsiConferenceErrors from './JitsiConferenceErrors';
 import * as JitsiConferenceEvents from './JitsiConferenceEvents';
 import JitsiConnection from './JitsiConnection';
@@ -11,6 +12,7 @@ import JitsiTrackError from './JitsiTrackError';
 import * as JitsiTrackErrors from './JitsiTrackErrors';
 import * as JitsiTrackEvents from './JitsiTrackEvents';
 import * as JitsiTranscriptionStatus from './JitsiTranscriptionStatus';
+import JitsiParticipant from './JitsiParticipant';
 import RTC from './modules/RTC/RTC';
 import JitsiTrack from './modules/RTC/JitsiTrack';
 import JitsiLocalTrack from './modules/RTC/JitsiLocalTrack';
@@ -95,7 +97,9 @@ export default {
 
     version: '{#COMMIT_HASH#}',
 
+    JitsiConference,
     JitsiConnection,
+    JitsiParticipant,
 
     /**
      * {@code ProxyConnectionService} is used to connect a remote peer to a
